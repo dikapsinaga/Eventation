@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title style="text-align: center">Canon</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" href="Semantic-UI-CSS-master/semantic.min.css" />
+    <script src="jquery-3.3.1.min.js"></script>
+    <script src="Semantic-UI-CSS-master/semantic.min.js"></script>
+    <style>
+  .pusher {
+        padding-top: 50px;}
+        </style>
+    </style>
+</head>
+<body>
+<script src="Semantic-UI-CSS-master/semantic.min.js"></script>
+<body>
+    <div class="ui sidebar vertical left inverted menu">
+            <a href="" class="item">Monday</a>
+            <a href="" class="item">Tuesday</a>
+            <a href="" class="item">Wednesday</a>
+            <a href="" class="item">Thursday</a>
+            <a href="" class="item">Friday</a>
+            <a href="aboutus.html" class="item">About Us</a>
+    </div>
+    <div class="ui basic icon top fixed menu"> 
+        <a id="toggle" class="item">
+            <i class="sidebar icon"></i>
+        </a>
+        <p style="font-size: 25px; align-self: center;padding-left: 45%;">Canon</p>
+
+    </div>
+     <div class="pusher">
+        <div class="ui container">
+            <div style="float: initial">
+                <button onclick="location.href ='/register.php'"class="ui primary button" data-tooltip="Sign In" data-position="right center" style="float: right; margin-right: 80px;">
+                  Sign Up
+                </button>
+                <div onclick="location.href ='/signup.php'" class="ui button" data-tooltip="Join with us!! Get your account here!" data-position="right center" style="float:right; margin-right:30px;">
+                    Sign Up
+                  </div>
+              </div>
+                    <div class="ui container">
+                      please login :)
+                        <form class="ui form" method="POST" action="logincheck.php" id="form">
+                            <div class="six wide field">
+                              <div class="field">
+                              <label for="username"> Username </label>
+                              <input type="text" name="username" placeholder="Username">
+                            </div>
+                            <div class="field" id="password">
+                              <label for="password"> Password </label>
+                              <input type="password" name="password" placeholder="Password">
+                            <div class="field">
+                            </div>
+                           <button class="ui button" type="submit">Login
+                            </div>
+                            <div class="ui error message"></div>   
+                          </form>
+                    </div>
+        </div> 
+    </div>
+    <script>
+    $('#toggle').click(function(){
+        $('.ui.sidebar').sidebar('toggle');
+    });
+    </script>
+    <script>$('.ui.form')
+                .form({
+                  on: 'blur',
+                  fields: {
+                    username: {
+                      identifier  : 'username',
+                      rules: [
+                        {
+                          type   : 'empty',
+                          prompt : 'Please enter your username'
+                        },
+                        {
+                          type   : 'minLength[6]',
+                          prompt : 'Your username must be at least 6 characters'
+                        }
+                      ]
+                    },
+                    password: {
+                      identifier  : 'password',
+                      rules: [
+                        {
+                          type   : 'empty',
+                          prompt : 'Please enter your password'
+                        },
+                        {
+                          type   : 'minLength[8]',
+                          prompt : 'Your password must be at least 8 characters'
+                        }
+                    ]
+                  }
+              }
+          }
+        );
+    </script>
+</body>
+</html>
